@@ -9,4 +9,8 @@ public class Calculadora {
         return numero * fatorial(numero - 1);
     }
 
+    public static Integer soma (Integer numero1, Integer numero2) {
+        return numero1 + numero2;
+    }
+
 }

@@ -13,9 +13,15 @@ import java.io.IOException;
 public class Controlador {
 
     @ResponseStatus(HttpStatus.OK)
-    @RequestMapping(name = "fatorial", method = RequestMethod.GET)
+    @RequestMapping(value = "fatorial", method = RequestMethod.GET)
     public Integer fatorial(@RequestParam(name = "numero") @Valid @NotNull @NotBlank Integer numero)  {
         return Calculadora.fatorial(numero);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(value = "soma", method = RequestMethod.GET)
+    public Integer soma(@RequestParam(name = "numero1") @Valid @NotNull @NotBlank Integer numero1, @RequestParam(name = "numero2") @Valid @NotNull @NotBlank Integer numero2)  {
+        return Calculadora.soma(numero1, numero2);
     }
 
 }
